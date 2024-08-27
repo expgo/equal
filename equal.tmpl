@@ -1,0 +1,15 @@
+{{ define "body" }}
+{{- $N := .Name -}}
+{{- $R := .ReceiverName -}}
+{{- $P := .ParameterName -}}
+{{- $F := .FunctionName -}}
+func ({{$R}} *{{$N}}) {{$F}}({{$P}} *{{$N}}) bool {
+{{- range $i, $f := .Fields }}
+    if {{$R}}.{{$f}} != {{$P}}.{{$f}} {
+        return false
+    }
+{{ end }}
+
+    return true
+}
+{{ end }}
