@@ -44,6 +44,10 @@ func (f *Factory) New(typedAnnotations []*api.TypedAnnotation) (api.Generator, e
 				}
 			}
 
+			if len(equal.Parameter) == 0 {
+				equal.Parameter = "o" + equal.Receiver
+			}
+
 			allEquals = append(allEquals, equal)
 		}
 	}
