@@ -2,7 +2,7 @@ package equal
 
 //go:generate ag --dev-plugin=github.com/expgo/equal
 
-// @Equal(Excludes={"SlotNumber", "Address", "OrderIndex"})
+// @Equal(excludes={"SlotNumber", "Address", "OrderIndex"})
 type DataMonitor struct {
 	Name         string
 	SlotNumber   int

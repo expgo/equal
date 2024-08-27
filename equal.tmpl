@@ -1,8 +1,8 @@
 {{ define "body" }}
 {{- $N := .Name -}}
-{{- $R := .ReceiverName -}}
-{{- $P := .ParameterName -}}
-{{- $F := .FunctionName -}}
+{{- $R := .Receiver -}}
+{{- $P := .Parameter -}}
+{{- $F := .Function -}}
 func ({{$R}} *{{$N}}) {{$F}}({{$P}} *{{$N}}) bool {
 {{- range $i, $f := .Fields }}
     if {{$R}}.{{$f}} != {{$P}}.{{$f}} {
