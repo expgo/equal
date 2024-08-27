@@ -4,40 +4,40 @@
 
 package equal
 
-func (e *DataMonitor) Equal(a *DataMonitor) bool {
-	if e.Name != a.Name {
+func (e *DataMonitor) Equal(oe *DataMonitor) bool {
+	if e.Name != oe.Name {
 		return false
 	}
 
-	if e.AddressType != a.AddressType {
+	if e.AddressType != oe.AddressType {
 		return false
 	}
 
-	if e.BlockAddress != a.BlockAddress {
+	if e.BlockAddress != oe.BlockAddress {
 		return false
 	}
 
-	if e.BitIndex != a.BitIndex {
+	if e.BitIndex != oe.BitIndex {
 		return false
 	}
 
-	if e.Scale != a.Scale {
+	if e.Scale != oe.Scale {
 		return false
 	}
 
-	if e.DefaultValue != a.DefaultValue {
+	if e.DefaultValue != oe.DefaultValue {
 		return false
 	}
 
-	if e.Description != a.Description {
+	if e.Description != oe.Description {
 		return false
 	}
 
-	if e.Identity != a.Identity {
+	if e.Identity != oe.Identity {
 		return false
 	}
 
-	if e.Tag != a.Tag {
+	if e.Tag != oe.Tag {
 		return false
 	}
 
